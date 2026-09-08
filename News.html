@@ -3,52 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News & Updates | WLVArchitecture</title>
-  <meta name="description" content="Department updates, student achievements, NSS rankings, and events from WLVArchitecture at University of Wolverhampton Springfield Campus.">
-  <meta property="og:title" content="WLVArchitecture News & Department Updates">
-  <meta property="og:description" content="Ranked #2 in the UK for Assessment & Feedback and Learning Resources (NSS 2026). Full RIBA & CIAT validated courses at Springfield Campus.">
-  <meta property="og:type" content="website">
+  <title>Posts & Department Updates | WLVArchitecture</title>
+  <meta name="description" content="Official course updates, student achievements, NSS rankings, and events from WLVArchitecture at Springfield Campus.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "EducationalOrganization",
-        "name": "WLVArchitecture - Department of Architecture and Built Environment",
-        "parentOrganization": {
-          "@type": "CollegeOrUniversity",
-          "name": "University of Wolverhampton",
-          "url": "https://www.wlv.ac.uk"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Lady Aruna Swraj Paul Building, Springfield Campus, Grimstone Street",
-          "addressLocality": "Wolverhampton",
-          "postalCode": "WV10 0JR",
-          "addressCountry": "GB"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How good is the Architecture course at the University of Wolverhampton?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "In the 2026 National Student Survey (NSS), the department ranked #2 in the UK for Assessment and Feedback and #2 in the UK for Learning Resources. It is ranked 7th in the UK for Student Satisfaction in the Complete University Guide 2027 and holds full RIBA Part 1 and Part 2 validation alongside CIAT accreditation."
-            }
-          }
-        ]
-      }
-    ]
-  }
-  </script>
 
   <style>
     :root {
@@ -136,164 +96,69 @@
     .nav-links a:hover,
     .nav-links a.active { color: var(--muted); }
 
-    /* Page Titles */
+    /* Content */
+    .content-section {
+      padding: 48px 0 60px;
+    }
     .page-title {
       font-size: 1.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       font-weight: 600;
-      margin: 40px 0 10px;
+      margin-bottom: 12px;
       text-align: center;
     }
     .page-intro {
       text-align: center;
       color: var(--muted);
       max-width: 650px;
-      margin: 0 auto 40px;
+      margin: 0 auto 36px;
       font-size: 0.95rem;
     }
 
-    /* Live Feed Container */
-    .live-feed-section {
-      background: var(--card-bg);
-      border: 1px dashed var(--border);
-      border-radius: 6px;
-      padding: 36px 20px;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-    .live-feed-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      margin-bottom: 8px;
-    }
-
-    /* Articles / Post Cards */
-    .archive-title {
-      font-size: 1.3rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin: 50px 0 30px;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 12px;
-    }
-    .news-post {
-      display: grid;
-      grid-template-columns: 380px 1fr;
-      gap: 32px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      overflow: hidden;
-      margin-bottom: 36px;
-      align-items: stretch;
-    }
-    .post-details {
-      padding: 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      border-right: 1px solid var(--border);
-    }
-    .post-date {
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--muted);
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-    .post-title {
-      font-size: 1.2rem;
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 14px;
-    }
-    .post-body {
-      font-size: 0.9rem;
-      color: #333333;
-      line-height: 1.65;
-    }
-    .post-body p { margin-bottom: 12px; }
-    .post-body ul { padding-left: 20px; margin-bottom: 12px; }
-    .post-body li { margin-bottom: 4px; }
-
-    /* Media Area */
-    .post-media {
+    /* Automated Feed Box */
+    .feed-container {
       background: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      min-height: 380px;
-    }
-    .media-container {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .media-container iframe,
-    .media-container video {
-      width: 100%;
-      height: 100%;
-      min-height: 380px;
-      border: 0;
-      display: block;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 30px;
+      min-height: 400px;
+      margin-bottom: 40px;
     }
 
-    /* Sliders */
-    .mini-slider {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      min-height: 380px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #f8f8f8;
-    }
-    .mini-slide {
-      display: none;
-      width: 100%;
-      height: 100%;
-      align-items: center;
-      justify-content: center;
-    }
-    .mini-slide.active { display: flex; }
-    .mini-slide img {
-      max-height: 440px;
-      max-width: 100%;
-      width: auto;
-      object-fit: contain;
-      display: block;
-      margin: 0 auto;
-    }
-    .slider-ctrl {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255, 255, 255, 0.85);
+    /* Archive Link Banner */
+    .archive-banner {
+      background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 50%;
-      width: 36px;
-      height: 36px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      font-size: 1rem;
-      z-index: 2;
+      border-radius: 8px;
+      padding: 28px;
+      text-align: center;
+      margin-top: 20px;
     }
-    .slider-ctrl:hover { background: #ffffff; }
-    .slider-ctrl.prev { left: 12px; }
-    .slider-ctrl.next { right: 12px; }
+    .archive-banner h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .archive-banner p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+    .archive-btn {
+      display: inline-block;
+      padding: 10px 22px;
+      background: var(--text);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: opacity 0.2s;
+    }
+    .archive-btn:hover { opacity: 0.85; }
 
     /* Footer */
     footer {
@@ -301,7 +166,6 @@
       font-size: 0.85rem;
       color: var(--muted);
       border-top: 1px solid var(--border);
-      margin-top: 50px;
     }
     .footer-grid {
       display: grid;
@@ -318,10 +182,7 @@
     .disclaimer { font-size: 0.75rem; line-height: 1.4; margin-top: 8px; }
     .copyright-note { font-size: 0.75rem; color: #888; margin-top: 6px; }
 
-    /* Responsive */
-    @media (max-width: 900px) {
-      .news-post { grid-template-columns: 1fr; }
-      .post-details { border-right: none; border-bottom: 1px solid var(--border); }
+    @media (max-width: 768px) {
       .footer-grid { grid-template-columns: 1fr; text-align: left; }
       .footer-center, .footer-right { text-align: left; }
       nav { flex-direction: column; gap: 16px; }
@@ -370,201 +231,24 @@
       </ul>
     </nav>
 
-    <main>
-      <h2 class="page-title">Department Updates & News</h2>
-      <p class="page-intro">Real-time studio updates, live projects, national awards, and student achievements from Springfield Campus.</p>
+    <main class="content-section">
+      <h2 class="page-title">Department Updates</h2>
+      <p class="page-intro">Real-time announcements, student achievements, and studio culture from WLVArchitecture.</p>
 
-      <!-- AUTOMATED LIVE FEED SECTION -->
-      <section class="live-feed-section">
-        <h3 class="live-feed-title">Latest Updates (Automated Feed)</h3>
+      <!-- AUTOMATED FEED CONTAINER -->
+      <div class="feed-container">
         <!-- PASTE YOUR SOCIABLEKIT / ELFSIGHT WIDGET CODE HERE -->
-        <p style="color: var(--muted); font-size: 0.9rem;">Once your embed script is pasted, new LinkedIn updates sync automatically right here.</p>
+        <p style="text-align: center; color: var(--muted); padding-top: 150px;">
+          LinkedIn live updates stream automatically here once the widget code is pasted.
+        </p>
+      </div>
+
+      <!-- LINK TO HISTORIC ARCHIVE -->
+      <section class="archive-banner">
+        <h3>Looking for Earlier Department News?</h3>
+        <p>Browse our complete post history from 2024 through 2026, including exhibition galleries, site visits, and guest lectures.</p>
+        <a href="archive.html" class="archive-btn">View 2024–2026 Archive →</a>
       </section>
-
-      <h3 class="archive-title">Post Archive</h3>
-
-      <!-- Post 1: NSS 2026 -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-08-17" class="post-date">17/08/2026</time>
-          <h3 class="post-title">Reflecting on NSS 2026: Architecture Rankings & Performance</h3>
-          <div class="post-body">
-            <p>With applicants starting to enroll and clearing underway, we are reflecting on WLVArchitecture's successes over the past academic year.</p>
-            <p><strong>NSS 2026 Highlights:</strong></p>
-            <ul>
-              <li>Ranked #2 in the UK for Assessment & Feedback (93.6% 3-year avg).</li>
-              <li>Ranked #2 in the UK for Learning Resources.</li>
-              <li>Ranked #9 in the UK for Academic Support (95.4% 3-year avg).</li>
-              <li>Ranked #10 in the UK for Student Voice.</li>
-              <li>7th Best Architecture School in UK for Student Satisfaction (Complete University Guide 2027).</li>
-            </ul>
-          </div>
-        </div>
-        <div class="post-media">
-          <img src="images/NSS 2026 poster.png" alt="NSS 2026 Poster" style="max-height: 440px; max-width: 100%; object-fit: contain;">
-        </div>
-      </article>
-
-      <!-- Post 2: Big Day Results -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-08-13" class="post-date">13/08/2026</time>
-          <h3 class="post-title">Today is the BIG day! 👏 ✨</h3>
-          <div class="post-body">
-            <p>Clearing isn't just for when grades don't go to plan. Our alumni Aditya graduated with a First Class Honours degree and works in practice after joining through our foundation route.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <div class="media-container">
-            <iframe src="https://www.youtube.com/embed/-LTtYxyEqZM?si=rH6y_mma_qha8xNb" title="Results Day Video" allowfullscreen></iframe>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 3: A Level Results Day Slider -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-08-12" class="post-date">12/08/2026</time>
-          <h3 class="post-title">A Level Results Day Tomorrow!</h3>
-          <div class="post-body">
-            <p>Wishing everyone getting results the very best of luck. We've compiled reasons to study Architecture and Architectural Design Technology at Springfield Campus.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <div class="mini-slider">
-            <div class="mini-slide active"><img src="images/5 Resons Why.png" alt="5 Reasons"></div>
-            <div class="mini-slide"><img src="images/NSS 2026 learning resources.png" alt="Learning Resources"></div>
-            <div class="mini-slide"><img src="images/NSS 2026 assessment and feedback.png" alt="Assessment"></div>
-            <div class="mini-slide"><img src="images/NSS 2026 complete university guide.png" alt="University Guide"></div>
-            <div class="mini-slide"><img src="images/NSS 2026 academic support.png" alt="Academic Support"></div>
-            <div class="mini-slide"><img src="images/NSS 2026 learning opportunities.png" alt="Opportunities"></div>
-            <div class="mini-slide"><img src="images/Why Wait.png" alt="Why Wait"></div>
-            <button class="slider-ctrl prev">&#10094;</button>
-            <button class="slider-ctrl next">&#10095;</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 4: Students Recognise WLVArchitecture -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-07-08" class="post-date">08/07/2026</time>
-          <h3 class="post-title">Students Recognise the WLVArchitecture Experience in NSS 2026</h3>
-          <div class="post-body">
-            <p>WLVArchitecture scored above benchmark across all seven NSS themes, placing top 10 nationally for four themes.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <div class="mini-slider">
-            <div class="mini-slide active"><img src="images/NSS202601.gif" alt="NSS Animation"></div>
-            <div class="mini-slide"><img src="images/NSS202602.jpg" alt="NSS Slide 2"></div>
-            <div class="mini-slide"><img src="images/NSS202603.jpg" alt="NSS Slide 3"></div>
-            <div class="mini-slide"><img src="images/NSS202604.jpg" alt="NSS Slide 4"></div>
-            <button class="slider-ctrl prev">&#10094;</button>
-            <button class="slider-ctrl next">&#10095;</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 5: Women in Property Finalist -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-06-28" class="post-date">28/06/2026</time>
-          <h3 class="post-title">Women in Property Midlands Finalists 🎉</h3>
-          <div class="post-body">
-            <p>Congratulations to second-year student Sukhjit Kaur, nominated as a finalist in the Women in Property Midlands Student Awards.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <img src="images/sukhjit.jpg" alt="Sukhjit Kaur" style="max-height: 440px; max-width: 100%; object-fit: contain;">
-        </div>
-      </article>
-
-      <!-- Post 6: SciFest 2026 -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-06-26" class="post-date">26/06/2026</time>
-          <h3 class="post-title">Working with Future Generations of Architects at SciFest 2026</h3>
-          <div class="post-body">
-            <p>Engaging school pupils with hands-on urban planning model-making and demonstrations with SPOT the robotic dog from the National Brownfield Institute.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <div class="mini-slider">
-            <div class="mini-slide active"><img src="images/scifest20261.jpg" alt="SciFest 1"></div>
-            <div class="mini-slide"><img src="images/scifest20262.jpg" alt="SciFest 2"></div>
-            <div class="mini-slide"><img src="images/scifest20263.jpg" alt="SciFest 3"></div>
-            <div class="mini-slide"><img src="images/scifest20264.jpg" alt="SciFest 4"></div>
-            <div class="mini-slide"><img src="images/scifest20265.jpg" alt="SciFest 5"></div>
-            <div class="mini-slide"><img src="images/scifest20266.jpg" alt="SciFest 6"></div>
-            <div class="mini-slide"><img src="images/scifest20267.jpg" alt="SciFest 7"></div>
-            <button class="slider-ctrl prev">&#10094;</button>
-            <button class="slider-ctrl next">&#10095;</button>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 7: RIBA & ARB Full Validation Milestone -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-06-19" class="post-date">19/06/2026</time>
-          <h3 class="post-title">A Major Milestone: Full RIBA Validation & ARB Prescription</h3>
-          <div class="post-body">
-            <p>Following a two-day RIBA Visiting Board visit, both courses secured successful outcomes: BSc (Hons) Architecture full 5-year revalidation, and MArch Architecture full 5-year validation.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <img src="images/RIBAlogo.jpg" alt="RIBA Logo" style="max-height: 440px; max-width: 100%; object-fit: contain;">
-        </div>
-      </article>
-
-      <!-- Post 8: End of Year Show Video -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-06-05" class="post-date">05/06/2026</time>
-          <h3 class="post-title">20th End of Year Show Highlights</h3>
-          <div class="post-body">
-            <p>Celebrating twenty editions of our End of Year Show and our 5th exhibition held within the Springfield Campus atrium.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <div class="media-container">
-            <iframe src="https://www.youtube.com/embed/BLzjbk-zkWM?si=biDxKDm886DNoom5" title="End of Year Show Video" allowfullscreen></iframe>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 9: Train to Studio Video -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-02-25" class="post-date">25/02/2026</time>
-          <h3 class="post-title">Platform 4 to Studio Door in 7 Minutes 🚆</h3>
-          <div class="post-body">
-            <p>Direct walking route from Wolverhampton Railway Station right into our second-floor design studios at the Springfield Campus.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <div class="media-container">
-            <video src="images/WLVTrain to Studio 1.mov" autoplay loop muted playsinline></video>
-          </div>
-        </div>
-      </article>
-
-      <!-- Post 10: 2007 APD Flipbook Archive -->
-      <article class="news-post">
-        <div class="post-details">
-          <time datetime="2026-03-10" class="post-date">10/03/2026</time>
-          <h3 class="post-title">Digging into the Archives (circa 2007)</h3>
-          <div class="post-body">
-            <p>Revisiting the original 2007 Architecture & Product Design brochure showing our digital design origins.</p>
-          </div>
-        </div>
-        <div class="post-media">
-          <div class="media-container">
-            <iframe src="https://heyzine.com/flip-book/57d749caa9.html" title="Archive Brochure" style="border:none;"></iframe>
-          </div>
-        </div>
-      </article>
     </main>
 
     <!-- Footer -->
@@ -574,7 +258,7 @@
           <address>
             <a href="https://maps.app.goo.gl/CxRhL4zGkPSKZpCE9" target="_blank" rel="noopener">
               University of Wolverhampton<br>
-              Lady Aruna Swraj Paul Building<br>
+              Lady Aruna Building<br>
               Springfield Campus<br>
               Grimstone Street<br>
               Wolverhampton WV10 0JR
@@ -588,7 +272,7 @@
         </div>
         <div class="footer-col footer-right">
           <a href="https://www.wlv.ac.uk/" target="_blank" rel="noopener">
-            <img src="images/wlv_logo_black_on_white.png" alt="University Logo" class="footer-logo">
+            <img src="images/wlv_logo_black_on_white.png" alt="University of Wolverhampton Logo" class="footer-logo">
           </a>
           <p class="disclaimer">
             This unofficial blogsite is operated by WLVArchitecture. For the official University site, visit <a href="https://www.wlv.ac.uk/" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">wlv.ac.uk</a>.
@@ -601,32 +285,5 @@
     </footer>
   </div>
 
-  <script>
-    // Lightweight slider controller for all post sliders
-    document.querySelectorAll('.mini-slider').forEach(slider => {
-      const slides = slider.querySelectorAll('.mini-slide');
-      const prev = slider.querySelector('.slider-ctrl.prev');
-      const next = slider.querySelector('.slider-ctrl.next');
-      let idx = 0;
-
-      function update() {
-        slides.forEach(s => s.classList.remove('active'));
-        slides[idx].classList.add('active');
-      }
-
-      if (next) {
-        next.addEventListener('click', () => {
-          idx = (idx + 1) % slides.length;
-          update();
-        });
-      }
-      if (prev) {
-        prev.addEventListener('click', () => {
-          idx = (idx - 1 + slides.length) % slides.length;
-          update();
-        });
-      }
-    });
-  </script>
 </body>
 </html>
